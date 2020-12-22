@@ -1,4 +1,5 @@
 import React from "react";
+import { Styled } from "./Grid.styles";
 
 type GridAlignItems =
   | "flex-start"
@@ -38,8 +39,8 @@ const Grid: React.FunctionComponent<GridProps> = ({
   md,
   sm,
   children,
-}: GridProps) => {
-  return <div>{children}</div>;
+}) => {
+  return <Styled.Grid>{children}</Styled.Grid>;
 };
 
 export default Grid;
