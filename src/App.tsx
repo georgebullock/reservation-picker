@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { routes } from "./../src/routes/index.routes";
+import { GlobalStyles } from "./shared/components/GlobalStyles/GlobalStyles.styles";
 import "./App.css";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           );
         })}
       </Router>
+      <GlobalStyles />
     </main>
   );
 }
