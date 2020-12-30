@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useCallback } from "react";
+import { Styled } from "./ReservationTimePickers.styles";
 import ReservationTimePicker from "./../ReservationTimePicker/ReservationTimePicker";
 import Grid from "../../../shared/components/Grid/Grid";
 import { createTimePickerData } from "../../../helpers/createTimerPickerData";
@@ -48,9 +49,9 @@ const ReservationTimePickers: React.FunctionComponent = () => {
   return (
     <ReservationSelectionContext.Provider value={activeReservations}>
       <Grid row={true}>{reservationTimePickers}</Grid>
-      <div>
+      <Styled.ReservationFormLink>
         <Link to="/reservation-confirmation">Confirm Reservations</Link>
-      </div>
+      </Styled.ReservationFormLink>
     </ReservationSelectionContext.Provider>
   );
 };
