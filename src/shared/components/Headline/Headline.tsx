@@ -1,4 +1,5 @@
 import React from "react";
+import { Styled } from "./Headline.styles";
 
 /* ==============================================
  * Types and Interfaces
@@ -15,8 +16,8 @@ const Headline: React.FunctionComponent<HeadlineProps> = ({
   headingLevel,
   headingText,
 }: HeadlineProps) => {
-  const Element = headingLevel;
-  return <Element>{headingText}</Element>;
+  const Element = Styled.Headline;
+  return <Element as={headingLevel}>{headingText}</Element>;
 };
 
 export default Headline;
